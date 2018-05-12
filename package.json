@@ -1,14 +1,14 @@
 {
-  "name": "no-git-secrets",
+  "name": "no-secrets",
   "version": "1.0.0",
-  "description": "Git smudge and clean filter toolset for keeping secrets out of your repositories.",
-  "main": "./src/no-git-secrets.js",
+  "description": "Smudge and clean filter toolset for keeping secrets out of your Git repositories and build systems.",
+  "main": "./no-secrets.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jgalentine007/no-git-secrets.git"
+    "url": "git+https://github.com/jgalentine007/no-secrets.git"
   },
   "keywords": [
     "git",
