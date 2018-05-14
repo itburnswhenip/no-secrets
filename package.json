@@ -1,6 +1,6 @@
 {
   "name": "no-secrets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smudge and clean filter toolset for keeping secrets out of your Git repositories and build systems.",
   "main": "./no-secrets.js",
   "scripts": {
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/jgalentine007/no-git-secrets/issues"
   },
-  "homepage": "https://github.com/jgalentine007/no-git-secrets#readme"
+  "homepage": "https://github.com/jgalentine007/no-git-secrets#readme",
+  "dependencies": {
+    "ajv": "^6.5.0"
+  }
 }

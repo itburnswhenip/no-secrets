@@ -8,8 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\src\\no-git-secrets.js",
-            "args" : [ "clean" ],
+            "program": "${workspaceFolder}\\no-secrets.js",
+            "args" : [ "./no-secrets.example.json", "clean" ],
             "console": "integratedTerminal"
         }
     ]

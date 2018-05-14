@@ -1,0 +1,18 @@
+{   
+  "definitions": {
+    "filter": {
+      "type": "object",
+      "properties": {
+        "regex": {"type": "string"},
+        "smudge": {"type": "string"},
+        "clean": {"type": "string"}
+      },
+      "required": ["regex", "smudge", "clean"]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "filters": { "type": "array", "items": { "$ref": "#/definitions/filter" }}
+  },
+  "required": ["filters"]
+}
