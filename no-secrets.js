@@ -16,8 +16,8 @@ const FilterMode = {
  */
 function escapeFilter(input) {
     input =  input.replace('$', '$$$$');
-    return input
-};
+    return input;
+}
 
 /**
  * Returns the filter mode in a given configuration.
@@ -29,7 +29,7 @@ function getFilterValue(config, filter) {
         return escapeFilter(filter.smudge);
     else
         return escapeFilter(filter.clean);
-};
+}
 
 /**
  * Filters a data string.
@@ -45,7 +45,7 @@ function filter(config, data) {
     }
 
     process.stdout.write(line);
-};
+}
 
 /**
  * Returns the chosen filter mode command line argument.
@@ -62,7 +62,7 @@ function getArgvFilterMode() {
         default: 
             throw 'Please specify the filter mode (smudge|clean). For example: node no-secrets.js ./no-secrets.json clean';
     }
-};
+}
 
 /**
  * Returns the chosen configuration file command line argument.
@@ -74,10 +74,10 @@ function getArgvConfigFile() {
     if (arg == null)
         throw 'Please specify the configuration relative or absolute path. For example: node no-secrets.js ./no-secrets.json clean';
     else if (!fs.existsSync(arg))
-        throw 'Configuration file not found.'
+        throw 'Configuration file not found.';
     else
-        return arg
-};
+        return arg;
+}
 
 /**
  * Validates a no-secrets configuration object using JSON schema.
@@ -90,7 +90,7 @@ function validateConfig(configSchema, config) {
     let valid = ajv.validate(configSchema, config);
     if (!valid)
         throw 'Error(s) occured reading the configuration file:\n' + ajv.errors.map(e => e.message).join('\n');
-};
+}
 
 /**
  * Read a JSON file using 'fs'.
@@ -100,8 +100,9 @@ function validateConfig(configSchema, config) {
 function readJsonFile(fs, path) {
     let data = fs.readFileSync(path);
     return JSON.parse(data);
-};
+}
 
+// main()
 try {
     const configSchema = require('./configSchema.json');
     let config = readJsonFile(fs, getArgvConfigFile());
@@ -109,7 +110,7 @@ try {
     validateConfig(configSchema, config);
     config.filterMode = getArgvFilterMode();
 
-    process.stdin.on("data", function(data) { filter(config, data) });
+    process.stdin.on("data", function(data) { filter(config, data); });
 }
 catch(err) {
     console.error(err);
