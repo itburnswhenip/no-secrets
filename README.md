@@ -2,6 +2,10 @@
 
 Smudge and clean filter script for keeping secrets out of your Git repositories and build systems.
 
+## Install ##
+
+**no-secrets** should be installed globally and will create a command called `no-secrets`. This is necessary since Git smudge and clean filters require your command to be available in the environment path.
+
 ## Usage ##
 
 **no-secrets** will 'smudge' or 'clean' text input read from `STDIN` and write it to `STDOUT`.
