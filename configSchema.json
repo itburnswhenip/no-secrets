@@ -4,15 +4,17 @@
       "type": "object",
       "properties": {
         "regex": {"type": "string"},
-        "smudge": {"type": "string"},
-        "clean": {"type": "string"}
+        "smudge": {"type": "string", "default": ""},
+        "clean": {"type": "string", "default": ""},
+        "path": {"type": "string", "default": "**"}
       },
-      "required": ["regex", "smudge", "clean"]
+      "required": ["regex"]
     }
   },
   "type": "object",
   "properties": {
-    "filters": { "type": "array", "items": { "$ref": "#/definitions/filter" }}
+    "filters": { "type": "array", "items": { "$ref": "#/definitions/filter" }},
+    "pathNoCase": {"type": "boolean", "default": true}
   },
   "required": ["filters"]
 }

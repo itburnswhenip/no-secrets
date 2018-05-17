@@ -1,0 +1,4 @@
+  <connectionStrings>    
+    <add name="ConnectionString" connectionString="hello zxcv" />
+    <add name="ConnectionString2" connectionString="hello asdf" />
+  </connectionStrings>

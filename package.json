@@ -1,6 +1,6 @@
 {
   "name": "no-secrets",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Smudge and clean filter toolset for keeping secrets out of your Git repositories and build systems.",
   "main": "./index.js",
   "scripts": {
@@ -24,9 +24,12 @@
   },
   "homepage": "https://github.com/jgalentine007/no-git-secrets#readme",
   "dependencies": {
-    "ajv": "^6.5.0"
+    "ajv": "^6.5.0",
+    "minimatch": "^3.0.4"
   },
   "bin": {
-    "no-secrets": "index.js"
+    "no-secrets": "index.js",
+    "no-secrets-install": "installfilter.sh",
+    "no-secrets-install-windows": "installfilter.cmd"
   }
 }
