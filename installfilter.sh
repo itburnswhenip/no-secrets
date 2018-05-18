@@ -44,15 +44,15 @@ grep -q -F "$GITFILTER" $GITATTRIBUTES > /dev/null 2>&1
 if [ $? != "0" ] 
 then 
     echo $GITFILTER >> $GITATTRIBUTES 
-    printf "$GITFILTER added to .gitattributes"
+    printf "$GITFILTER added to .gitattributes\n"
 fi
 
 # add filter template json to .gitignore if it doesn't already exist
-grep -q -F "$GITFILTERTEMPLATEJSON" $GITIGNORE > /dev/null 2>&1
+grep -q -F "$GITFILTERJSON" $GITIGNORE > /dev/null 2>&1
 if [ $? != "0" ]
 then
-    echo $GITFILTERTEMPLATEJSON >> $GITIGNORE
-    printf "$GITFILTERTEMPLATEJSON added to .gitignore"
+    echo $GITFILTERJSON >> $GITIGNORE
+    printf "$GITFILTERJSON added to .gitignore\n"
 fi
 
 cp ${NODE_MODULES}/no-secrets/no-secrets.template.json $FILTERNAME.template.json
