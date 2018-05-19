@@ -1,0 +1,1 @@
+    <add name="ConnectionString" connectionString="my dummy connection string $" />

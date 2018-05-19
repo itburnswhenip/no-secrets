@@ -39,7 +39,7 @@ class Filter {
       }
     }
 
-    process.stdout.write(line);
+    return line;
   }
 }
 

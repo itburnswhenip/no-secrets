@@ -1,4 +1,0 @@
-  <connectionStrings>    
-    <add name="ConnectionString" connectionString="my dummy connection string $" />
-    <add name="ConnectionString2" connectionString="hello 5678" />
-  </connectionStrings>

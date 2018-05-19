@@ -1,4 +1,1 @@
-  <connectionStrings>    
     <add name="ConnectionString" connectionString="hello 1234" />
-    <add name="ConnectionString2" connectionString="hello 5678" />
-  </connectionStrings>
