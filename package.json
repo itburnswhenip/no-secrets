@@ -1,10 +1,13 @@
 {
   "name": "no-secrets",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Smudge and clean filter toolset for keeping secrets out of your Git repositories and build systems.",
-  "main": "./index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "jest --watch",
+    "watchall": "jest --watchAll",
+    "coverage": "jest --coverage --collectCoverageFrom=src/*.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +31,12 @@
     "minimatch": "^3.0.4"
   },
   "bin": {
-    "no-secrets": "index.js",
+    "no-secrets": "./src/index.js",
     "no-secrets-install": "installfilter.sh",
     "no-secrets-install-windows": "installfilter.cmd"
+  },
+  "devDependencies": {
+    "hasha": "^3.0.0",
+    "jest": "^22.4.4"
   }
 }
