@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jgalentine007/no-secrets.svg?branch=master)](https://travis-ci.org/jgalentine007/no-secrets)
+
 # no-secrets #
 
 Smudge and clean filter script for keeping secrets out of your Git repositories and build systems. You can use this if you are unable to use an environment variable approach (or don't want to) or do not want the complexity of a key management system.
