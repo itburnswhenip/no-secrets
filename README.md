@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jgalentine007/no-secrets.svg?branch=master)](https://travis-ci.org/jgalentine007/no-secrets)
+[![Build Status](https://travis-ci.org/jgalentine007/no-secrets.svg?branch=master)](https://travis-ci.org/jgalentine007/no-secrets) [![Coverage Status](https://coveralls.io/repos/github/jgalentine007/no-secrets/badge.svg?branch=master)](https://coveralls.io/github/jgalentine007/no-secrets?branch=master)
 
 # no-secrets #
 
