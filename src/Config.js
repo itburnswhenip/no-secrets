@@ -18,7 +18,7 @@ class Config {
 
   validate(schema) {
     let ajv = new Ajv({allErrors: true, schemas: [schema], useDefaults:true});
-    let valid = ajv.validate(schema, this.settings);
+    let valid = ajv.validate(schema, this._settings);
     if (!valid)
       throw 'Error(s) occured reading the configuration file:\n' + ajv.errors.map(e => e.message).join('\n');
   }

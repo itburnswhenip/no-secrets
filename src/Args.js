@@ -7,7 +7,6 @@ class Args {
   }
 
   getFilterMode() {
-    debugger;
     switch (this._argv[3]) {
       case 'smudge':
         return FilterMode.SMUDGE;
