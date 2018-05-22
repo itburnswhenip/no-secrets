@@ -43,7 +43,7 @@ GLOBAL_BIN=${GLOBAL_BIN//\\/\/}
 grep -q -F "$GITFILTER" $GITATTRIBUTES > /dev/null 2>&1
 if [ $? != "0" ] 
 then 
-    echo -e "\n" >> $GITATTRIBUTES
+    echo "" >> $GITATTRIBUTES
     echo $GITFILTER >> $GITATTRIBUTES 
     printf "$GITFILTER added to .gitattributes\n"
 fi
@@ -52,7 +52,7 @@ fi
 grep -q -F "$GITFILTERJSON" $GITIGNORE > /dev/null 2>&1
 if [ $? != "0" ]
 then
-    echo -e "\n" >> $GITIGNORE
+    echo "" >> $GITIGNORE
     echo $GITFILTERJSON >> $GITIGNORE
     printf "$GITFILTERJSON added to .gitignore\n"
 fi
