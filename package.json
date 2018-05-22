@@ -1,6 +1,6 @@
 {
   "name": "no-secrets",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Smudge and clean filter toolset for keeping secrets out of your Git repositories and build systems.",
   "main": "./src/index.js",
   "scripts": {
